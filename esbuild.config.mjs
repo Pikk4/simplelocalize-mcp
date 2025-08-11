@@ -1,0 +1,35 @@
+import { build } from 'esbuild'
+
+await build({
+  entryPoints: ['src/index.ts'],
+  bundle: true,
+  platform: 'node',
+  format: 'esm',
+  target: 'node18',
+  outfile: 'build/index.js',
+  sourcemap: true,
+  banner: {
+    js: '#!/usr/bin/env node',
+  },
+  legalComments: 'none',
+  minify: false,
+  logLevel: 'info',
+  metafile: false,
+  treeShaking: true,
+  packages: 'bundle',
+  external: [
+    'node:module',
+    'node:fs',
+    'node:path',
+    'node:os',
+    'node:url',
+    'node:util',
+    'node:events',
+    'node:stream',
+    'node:buffer',
+    'node:http',
+    'node:https',
+    'node:crypto',
+    'node:child_process',
+  ],
+})

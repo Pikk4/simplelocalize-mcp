@@ -1,0 +1,46 @@
+# Source files (not needed in published package)
+src/
+tsconfig.json
+eslint.config.js
+.prettierrc
+.prettierignore
+
+# Development dependencies
+node_modules/
+pnpm-lock.yaml
+
+# Build artifacts (will be included via package.json files field)
+# build/ is explicitly included in package.json
+
+# Git files
+.git/
+.gitignore
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# Temporary folders
+tmp/
+temp/
